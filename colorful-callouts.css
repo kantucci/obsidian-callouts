@@ -1,0 +1,378 @@
+/* Custom colors */
+:root {
+
+/* -- COLORS--  */
+/*basic*/
+ --coulcyan: #79DAD1;
+ --coulvert: #89E595;
+ --couljaune: #EFCC18;
+ --coulorange: #E9A347;
+ --coulrouge: #F58A75;
+ --coulrose: #ED79BA;
+ --coulviolet: #C2A1F4;
+ --coulsoftblue:#E9F0FC;
+ --coulbleunuit:rgb(16, 7, 43);
+ --coulgrisclair:rgb(245, 245, 245);
+ --coulpervenche:#51ABEF;
+/*neon*/
+ --coulvertneon: #5BFA7D;
+ --coulvertneonrgb: 71, 248, 115;
+ --couljauneneon: #FFEE00;
+ --coulroseneon: #FF3DA8;
+ --coulvioletneon: #9723C9;
+/*brutalist*/
+  --couljaunebrutalist: rgb(243, 215, 8);
+  --couljauneclairbrutalist:rgb(255, 220, 88);
+  --coulvioletbrutalist: rgb(197, 161, 255);
+  --coulpinkbrutalist: rgb(255, 104, 180);
+  --coulorangebrutalist:rgb(255, 107, 107);
+  --coulroseclairbrutalist:rgb(255, 179, 239);
+/*dawn*/
+ --couljaunedawn: #ea9d34;
+ --coulrosedawn: #b4637a;
+ --coulvioletdawn: #907aa9;
+ --coulgrisdawn: #cecacd;
+ --coulbleudawn: #296A85;
+ --coultealdawn:#55959F;
+ --coulnoirdawn: #43415A;
+  --latte: rgb(239, 232, 224);
+  --dawnrose: rgb(254, 251, 244); 
+ --clearrose: rgb(254, 251, 244);
+ /* light callouts */
+ --couljaunelight:rgb(253, 253, 150);
+ --coulviolet2:#A388EA;
+
+
+ /* -- TYPO -- */
+ --fontlexend:"Lexend Mega";
+ --fontpublic:"Public Sans";
+ --fontmaple:"Maple Mono";
+ --fontkrona:"Krona One";
+ --fontpixelify:"Pixelify Sans";
+ --fontjetbrains:"JetBrains Mono";
+ --fontDM:"DM Sans";
+ --fontbrasilero:"Brasilero 2018 Free";
+
+
+/* -- DEGRADES -- */
+--degradeD1:linear-gradient(50deg, rgba(121,218,209,1) 0%, rgba(137,229,149,1) 13%, rgba(239,204,24,1) 31%, rgba(233,163,71,1) 50%, rgba(245,138,117,1) 67%, rgba(237,121,186,1) 83%, rgba(194,161,244,1) 100%);
+--degradeD2:linear-gradient(120deg, rgba(238,9,121) 0%, rgba(255,106,0,1)100%);
+--degradeD3:radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%) ,#ffffff";
+}
+
+
+/* NEO BRUTALIST CALLOUTS */
+
+/* neobrutalist general callouts */
+.callout .callout-title {
+    font-family: var(--title-font);
+    --callout-color: var(--title-color);
+    font-weight: bold;
+  }
+
+.callout {
+    background-color: var(--accent-color);
+  }
+
+/* Callout title Lexend noir */
+.callout[data-callout="b-yellow"] .callout-title,
+.callout[data-callout="b-violet"] .callout-title,
+.callout[data-callout="b-pink"] .callout-title,
+.callout[data-callout="pflat"] .callout-title {
+    --title-font: var(--fontlexend);
+    --title-color: 0,0,0;
+ }
+
+
+ .callout[data-callout="rrain"] .callout-title{
+    --title-font: var(--fontbrasilero);
+    --title-color: 255,255,255;
+    font-weight: regular;
+ }
+
+
+
+ /* We hide callout for some icons */
+.callout[data-callout="b-yellow"] .callout-icon,
+.callout[data-callout="b-violet"] .callout-icon,
+.callout[data-callout="b-pink"] .callout-icon,
+.callout[data-callout="vflat"] .callout-icon  {
+    display: none;
+  }
+
+/* We add border for some neobrutalist callouts */
+.callout[data-callout="b-yellow"] {
+    --accent-color:var(--couljaunebrutalist);
+   border: 2px solid #000000; 
+}
+
+.callout[data-callout="b-violet"] {
+    --accent-color:var(--coulvioletbrutalist);
+    border: 2px solid #000000;   
+}
+
+.callout[data-callout="b-pink"] {
+    --accent-color:var(--coulpinkbrutalist);
+    border: 2px solid #000000; 
+}
+
+
+/* PIXEL STYLE CALLOUTS */
+
+/* --- nblack & pink --- */ 
+.callout[data-callout="botchat"] .callout-title {
+    --title-font: var(--fontpixelify);
+    --title-color: 255,255,255;
+  }
+
+.callout[data-callout="botchat"] .callout-content{
+  color: var(--coulroseneon);
+  font-size: small;
+}
+
+.callout[data-callout="botchat"] {
+ --accent-color:black;
+  --callout-color: 255, 255, 255;
+  --callout-icon: lucide-pin;
+}
+
+/* --- dark blue + neon green --- */ 
+
+.callout[data-callout="botchat2"] .callout-title {
+    --title-font: var(--fontpixelify);
+    --title-color: var(--coulvertneonrgb);
+    --font-size: small;
+  }
+
+
+.callout[data-callout="botchat2"] {
+  background-color: var(--coulbleunuit);
+  --callout-color: 255, 255, 255;
+  --callout-icon: lucide-bot-message-square;
+}
+
+.callout[data-callout="botchat2"] .callout-content{
+  color: white;
+  font-size: small;
+}
+
+
+.callout[data-callout="ywarning"] .callout-title, 
+.callout[data-callout="yinfo"] .callout-title,
+.callout[data-callout="yflat"] .callout-title,
+.callout[data-callout="pflat"] .callout-title,
+.callout[data-callout="pflat2"] .callout-title {
+    --title-font: var(--fontpixelify);
+    --title-color: 16, 7, 43; 
+  }
+
+.callout[data-callout="vdotted"] .callout-title {
+    --title-font: var(--fontDM);
+    --title-color: 16, 7, 43; 
+  }
+
+  .callout[data-callout="blackflat"] .callout-title {
+    --title-font: var(--fontDM);
+    --title-color: 255, 255, 255; 
+    font-weight:900;
+  }
+
+
+.callout[data-callout="ywarning"] .callout-content, 
+.callout[data-callout="yinfo"] .callout-content,
+.callout[data-callout="yflat"] .callout-content,
+.callout[data-callout="plink"] .callout-content,
+.callout[data-callout="pflat2"] .callout-content {
+    font-family: var(--fontjetbrains);
+    font-weight: regular;
+    font-size: small;
+    color: black;
+  }
+
+
+.callout[data-callout="vdotted"] .callout-content {
+    font-family: var(--fontDM);
+    font-weight: medium;
+    color: black;
+  }
+
+.callout[data-callout="blackflat"] .callout-content {
+    font-family: var(--fontDM);
+    font-weight: medium;
+    color: white !important;
+    --callout-blend-mode: normal;
+  }
+
+.callout[data-callout="ywarning"]{
+  background-color: var(--couljaunelight);
+  --callout-icon: lucide-lightbulb;
+}
+.callout[data-callout="yinfo"]{
+  background-color: var(--coulsoftblue);
+  --callout-icon: lucide-cctv;
+}
+.callout[data-callout="yflat"]{
+  background-color: var(--coulorangebrutalist);
+  --callout-icon: lucide-lightbulb;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+.callout[data-callout="pflat"]{
+  background-color: var(--coulroseclairbrutalist);
+  --callout-icon: lucide-drafting-compass;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.callout[data-callout="pflat2"]{
+  background-color: var(--couljauneclairbrutalist);
+  --callout-icon: lucide-drafting-compass;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.callout[data-callout="blackflat"]{
+  background-color: #000000;
+  --callout-icon: lucide-tree-palm;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+
+.callout[data-callout="vdotted"]{
+background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 25px 25px;
+  --callout-icon: lucide-tree-palm;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+  background-color:rgb(255, 255, 255) !important;
+}
+
+.callout[data-callout="blackflat"]{
+  background-size: 25px 25px;
+  --callout-icon: lucide-tree-palm;
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+  background-color:rgb(0,0,0);
+}
+
+.callout[data-callout="blackflat"] ul{
+color:#FFFFFF;
+}
+
+
+
+.callout[data-callout="plink"] .callout-title {
+    --callout-color: 16, 7, 43;
+    font-family: var(--fontjetbrains);
+    font-weight: regular;
+    font-size: small; 
+}
+
+.callout[data-callout="plink"] {
+	background-color: var(--coulgrisclair);
+  --callout-icon: lucide-link;
+}
+
+.callout[data-callout="rrain"] {
+  background: var(--degradeD2);
+  border: 2px solid #30163C;
+  --callout-icon: lucide-sparkle;
+  }
+
+  .callout[data-callout="rrain"] .callout-content{
+    color:white;
+    font-family: var(--fontmaple);
+    font-size: small;
+}
+
+/* dawn callout light */
+
+.theme-light .callout[data-callout="dawn"] .callout-title {
+    --callout-color: 0, 0, 0;
+    font-family: var(--fontmaple);
+    font-weight: bold;
+}
+
+.theme-light .callout[data-callout="dawn"] {
+  background-color: var(--clearrose);
+  --callout-color: 68, 65, 90;
+  --callout-icon: lucide-pin;
+}
+
+.theme-light .callout[data-callout="dawn"] .callout-content {
+    color: var(--coulnoirdawn);
+    font-family: var(--fontmaple);
+    font-size: small;
+}
+
+/* dawn callout light */
+
+.theme-dark .callout[data-callout="dawn"] .callout-title {
+    --callout-color: 255, 255, 255;
+    font-family: var(--fontmaple);
+    font-weight: bold;
+}
+
+.theme-dark .callout[data-callout="dawn"] {
+  background-color: var(--coulbleunuit);
+  --callout-color: 255, 255, 255;
+  --callout-icon: lucide-pin;
+}
+
+.theme-dark .callout[data-callout="dawn"] .callout-content {
+    color: var(--coulgrisclair);
+    font-family: var(--fontmaple);
+    font-size: small;
+}
+
+/* Plan callout */
+
+.callout[data-callout="plan"] .callout-title {
+    --callout-color: 0, 0, 0;
+    font-family: var(--fontmaple);
+    font-weight: bold;
+}
+
+.callout[data-callout="plan"] {
+
+  --callout-color: 68, 65, 90;
+  --callout-icon: lucide-cctv;
+   border: 2px solid #352f47;
+ 
+}
+
+.callout[data-callout="plan"] .callout-content {
+    color: var(--coulnoirdawn);
+    font-family: var(--fontmaple);
+    font-size: small;
+}
+
+.callout[data-callout="plan"] .callout-content .tasks-list-text {
+    font-family: var(--fontmaple);
+    font-style: italic;
+    color: black;
+     } 
+
+.callout[data-callout="vflat"] .callout-title {
+     --title-font: var(--fontDM);
+    --title-color: 16, 7, 43; 
+  }
+
+  .callout[data-callout="vflat"] .callout-content {
+    font-family: var(--fontDM);
+    font-weight: bold;
+    color: black;
+     }
+
+.callout[data-callout="vflat"] .callout-content {
+    font-family: var(--fontDM);
+    font-weight: bold;
+     }
+
+  .callout[data-callout="vflat"]{
+  background-color: #A388EA;
+ /* The icon has been hidden for this callout */
+  border: 2px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+}
