@@ -3,7 +3,7 @@ This repository contains my personal collection of custom callouts for Obsidian.
 The goal is to make my notes a bit more colorful, joyful, and visually engaging.
 
 These callouts are tailored for my own workflow, but feel free to use or tweak them to fit your style.
-Perfect for anyone who wants a more playful and cozy note-taking experience in Obsidian.
+It's suited for anyone who wants a more playful and cozy note-taking experience in Obsidian.
 
 To get the exact same look as mine, you may need to download and install the following fonts : 
 - [Pixelify](https://fonts.google.com/specimen/Pixelify+Sans)
